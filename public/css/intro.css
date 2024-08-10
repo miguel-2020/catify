@@ -1,0 +1,281 @@
+/* Intro page */
+.intro{
+    display:grid;
+    grid:auto-flow min-content / 50% 51%;
+    height:100vh;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+   
+  }
+  
+  .column{
+    height:100vh;
+    padding:1em;
+    z-index:5;
+    position:relative;
+  }
+  .column.right{
+    background:var(--dark-color);
+   
+  }
+  
+  
+  
+  /* CAT STYLES START */
+  
+  .cat{
+    position:fixed;
+    z-index:1;
+    top:50%;
+    left:50%;
+    transform:translate(-80%,-50%);
+  }
+  .cat .inner{
+    position:relative;
+  }
+  .face{
+    width:5em;
+    height:5em;
+    background:var(--dark-color);
+    border-radius:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:1em;
+    position:relative;
+    box-shadow:inset 45px 0px 2px 2px white;
+  
+  }
+  
+  
+  
+  .whiskers{
+    position:absolute;
+    background:var(--light-gray);
+    height:20px;
+    width:40px;
+  clip-path: polygon(55% 95%, 1% 100%, 100% 100%);
+  
+    top:50%;
+    left:80%;
+    transform:translate(20%,-50%);
+  }
+  
+  
+  
+  /* Right whiskers */
+  .whiskers--1{
+    transform:translate(20%,-55%);
+  }
+  
+  .whiskers--2{
+    transform:translate(20%,-60%);
+  }
+  
+  /* left whiskers */
+  .whiskers--left{
+    left:-28%;
+  }
+  
+  .whiskers--3{
+    transform:translateY(-50%);
+  }
+  
+  .whiskers--4{
+    transform:translateY(-55%);
+  }
+  
+  .whiskers--5{
+    transform:translateY(-60%);
+  }
+  
+  .ear{
+    background:#444444;
+    height:30px;
+    width:100px;
+    position:absolute;
+    top:0;
+    clip-path: ellipse(25% 40% at 50% 50%);
+    transform:rotate(90deg);
+    z-index:-1;
+    top:-10px;
+   animation:ear-animate 2s ease infinite;
+  }
+  
+  .ear::after{
+    content:"";
+    display:block;
+    height:10px;
+    width:100px;
+    background:#555;
+    z-index:10;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    clip-path: ellipse(25% 40% at 50% 50%);
+    margin-left:5px;
+   
+  
+  }
+  
+  .ear--left{
+    left:-30px;
+  }
+  
+  .ear--right{
+    right:-30px;
+  }
+  
+  .eye{
+    height:1.5em;
+    width:3em;
+    transform:rotate(90deg) scale(0.8);
+    background:#fbdd74;
+    border-radius:100%;
+    position:relative;
+    
+  }
+  
+  .eye::after{
+    content:"";
+    display:block;
+    position:absolute;
+    height:0.3em;
+     width:2em;
+     border-radius:100%;
+    background:var(--dark-color);
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    clip-path: ellipse(25% 40% at 50% 50%);
+     animation:eyeball-animate 4s 1s ease infinite;
+  
+  }
+  
+  .nose{
+    position:absolute;
+    height:0.4em;
+     width:0.8em;
+    background:var(--pink-color);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform:rotate(180deg) translateY(-1em);
+    
+  }
+  
+  
+  
+  
+  
+  /* CAT BODY */
+  
+  .cat__body{
+   background:var(--dark-color);
+    height:100px;
+    width:100px;
+    clip-path: ellipse(46% 24% at 50% 50%);
+    position:absolute;
+    top:40%;
+    left:20%;
+    z-index:-3;
+    transform:rotate(10deg);
+  }
+  
+  /* HANDS */
+  .hand-wrapper{
+    position:fixed;
+    top:100px;
+    top:50%;
+    left:50%;
+    transform:translate(-10%,0%);
+    padding-top:1em;
+    height:100vh;
+    width:40px;
+    display:flex;
+  }
+  .hand{
+    display:flex;
+    flex-wrap:wrap;
+    
+    position:relative;
+    
+    
+    
+  }
+  .finger{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:140px;
+    width:50px;
+    background:var(--dark-color);
+    clip-path: ellipse(25% 7% at 50% 50%);
+   
+    position:absolute;
+  
+  }
+  
+  @media (width >= 62em){
+    .hand-wrapper{
+      transform:translate(20%,0%);
+    }
+    
+    /* left whiskers */
+  .whiskers--left{
+    left:-20%;
+  }
+  }
+  
+  .finger--1{
+    top:20px;
+  }
+  .finger--2{
+      top:40px;
+  }
+  
+  .nail{
+    z-index:1;
+   
+    height:40px;
+    width:30px;
+    background:var(--tertiary-color);
+    clip-path: ellipse(25% 3% at 50% 50%);
+    transform:translateX(15px) skew(40deg);
+  
+  }
+  /* CAT STYLES END */
+  
+  /* animations */
+  
+  @keyframes eye-animate{
+    from{
+       height:1.5em;
+    }
+    
+    50%{
+       height:1.2em;
+    }
+    
+  }
+  
+  @keyframes ear-animate{
+    from{
+       transform:rotate(90deg);
+    }
+    
+    50%{
+       transform:rotate(95deg);
+    }
+  }
+  
+  @keyframes eyeball-animate{
+    from{
+       transform: translate(-50%,-50%);
+    }
+    
+    50%{
+       transform: translate(-58%,-50%);
+    }
+  }
+  

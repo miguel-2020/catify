@@ -1,0 +1,27 @@
+.alert{
+     color: var(--secondary-color);
+     position: fixed;
+     bottom:1em;
+     left:2em;
+     border: 4px solid var(--dark-color);
+     border-radius: 0.5em;
+     padding: 1em;
+    
+   
+   }
+   
+   .alert h3{
+     font-weight: 300;
+   }
+   
+   .alert-btn{
+     font-size: 1.4rem;
+     display: block;
+     margin-left: auto;
+     cursor: pointer;
+     transition: color .3s ease;
+   }
+   
+   .alert-btn:hover{
+     color: var(--light-gray);
+   }
