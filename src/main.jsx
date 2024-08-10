@@ -11,7 +11,7 @@ import './index.css'
 import Intro from './pages/Intro.jsx';
 import Loader from './components/Loader.jsx';
 import Detail from './pages/Detail.jsx';
-import ErrorPage from './pages/error-page.jsx';
+import ErrorPage from './pages/Error-page.jsx';
 
 const router = createBrowserRouter([
 
